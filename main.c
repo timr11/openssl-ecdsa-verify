@@ -143,8 +143,8 @@ int main(void) {
 	d2i_ECDSA_SIG(&s_invalid, &sig_ptr_invalid, data_enc_invalid_len);
 
 	assert(ECDSA_do_verify(dgst, dgst_len, s_valid, eckey) == 1);
-	printf("Valid signature verified correctly\n");
+	printf("Valid signature verified (correctly)\n");
 	assert(ECDSA_do_verify(dgst, dgst_len, s_invalid, eckey) == 0);
-	printf("Invalid signature not verified correctly\n");
+	printf("Invalid signature not verified (correctly)\n");
 	exit(EXIT_SUCCESS);
 }
